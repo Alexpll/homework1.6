@@ -12,8 +12,4 @@ class Category(SqlAlchemyBase):
     category_id = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
     name = sa.Column(sa.String, nullable=True)
 
-    news = orm.relation("News",
-                        secondary="association",
-                        backref="category")
-
 

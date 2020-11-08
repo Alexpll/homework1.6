@@ -3,7 +3,7 @@ from models.news import News
 from models import db_session
 from models.category import Category
 
-db_session.global_init("user_news.db")
+db_session.global_init()
 session = db_session.create_session()
 
 user_1 = User(name="Siri", email="siri25@mail.ru")

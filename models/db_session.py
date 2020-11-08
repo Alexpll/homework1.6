@@ -9,14 +9,11 @@ SqlAlchemyBase = dec.declarative_base()
 __factory = None
 
 
-def global_init(db_file):
+def global_init():
     global __factory
 
     if __factory:
         return
-
-    if not db_file or not db_file.strip():
-        raise 
 
     conn_str = f'{DB_MODE}:///{DB_NAME}'
     print(f"Подключение к базе данных по адресу {conn_str}")

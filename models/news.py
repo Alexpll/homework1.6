@@ -14,6 +14,6 @@ class News(SqlAlchemyBase):
     user_id = sa.Column(sa.Integer, sa.ForeignKey("users.user_id"))
 
     user = orm.relation('User')
-    # categories = orm.relation("Category",
-    #                           secondary="association",
-     #                         backref="news")
+    categories = orm.relation("Category",
+                              secondary="association",
+                              backref="news")
